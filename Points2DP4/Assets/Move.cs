@@ -2,14 +2,17 @@
 
 public class Move : MonoBehaviour {
 
-    public GameObject goal;
+    public float speed = 1.0f;
+    public Transform goal;
 
     void Start() {
 
-        this.transform.Translate(goal.transform.position);
+        
     }
 
-    private void Update() {
-
+    void Update() {
+        Vector3 direction = goal.position - this.transform.position;
+        if(direction.magnitude > 1);
+        this.transform.Translate(direction.normalized * speed * Time.deltaTime);
     }
 }
