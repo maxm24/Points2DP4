@@ -53,6 +53,7 @@ public class Drive : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.Space))
         {
             CalculateDistance();
+            CalculateAngle();
         }
     }
 }
